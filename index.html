@@ -1,7 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>gmod-loadingscreen</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css"></head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <div class="overlay">
+        <img class ="logo" src="bg/logo.png" width="256px" height="" alt="" />
+        <h3>FR33DOM</h3>
+        <div class="container">
+            <div class="loadingbar">
+                <div class="progress" style="width:0%"></div>
+                Downloading <span class="file" data-currentfile></span>
+                <span class="percentage">
+                    (<span data-files-loaded></span>/<span data-files-total></span>) 
+                    <span data-percentage></span>%
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <audio autoplay loop></audio>
+
+    <script src="config.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script>
+        var totalCount = 6;
+        function ChangeIt() 
+        {
+        var num = Math.ceil( Math.random() * totalCount );
+        document.body.style.backgroundImage = "url('bg/"+num+".jpg')";
+        }
+        ChangeIt();
+
+    </script>
 </body>
 </html>
